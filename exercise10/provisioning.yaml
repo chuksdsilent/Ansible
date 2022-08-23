@@ -14,3 +14,19 @@
          name: ntp
          state: present
       when: ansible_distribution == "Ubuntu"
+
+    - name: Start & Enable NTP on RedHart
+      service:
+         name: ntpd
+         state: started
+         enable: yes
+      when: ansible_distribution == "RedHat"
+
+    - name: Start & enable NTP on Debian
+      service:
+         name: ntp
+         state: present
+         enable: yes
+      when: ansible_distribution == "Debian"
+
+

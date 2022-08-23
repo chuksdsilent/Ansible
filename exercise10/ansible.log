@@ -2620,3 +2620,76 @@ The offending line appears to be:
 2022-08-23 10:54:47,071 p=26499 u=root n=ansible | web01                      : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 2022-08-23 10:54:47,072 p=26499 u=root n=ansible | web02                      : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 2022-08-23 10:54:47,072 p=26499 u=root n=ansible | web03                      : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-08-23 11:01:04,849 p=26627 u=root n=ansible | ERROR! couldn't resolve module/action 'services'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/root/vprofile/exercise10/provisioning.yaml': line 18, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: Start & Enable NTP on RedHart
+      ^ here
+
+2022-08-23 11:03:00,568 p=26637 u=root n=ansible | PLAY [Provisioning Server] **************************************************************************
+2022-08-23 11:03:00,580 p=26637 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 11:03:02,172 p=26637 u=root n=ansible | ok: [db01]
+2022-08-23 11:03:02,185 p=26637 u=root n=ansible | ok: [web02]
+2022-08-23 11:03:02,187 p=26637 u=root n=ansible | ok: [web01]
+2022-08-23 11:03:02,345 p=26637 u=root n=ansible | ok: [web03]
+2022-08-23 11:03:02,353 p=26637 u=root n=ansible | TASK [Install NTP on Centos] ************************************************************************
+2022-08-23 11:03:02,489 p=26637 u=root n=ansible | skipping: [web03]
+2022-08-23 11:03:03,219 p=26637 u=root n=ansible | ok: [db01]
+2022-08-23 11:03:03,232 p=26637 u=root n=ansible | ok: [web02]
+2022-08-23 11:03:03,234 p=26637 u=root n=ansible | ok: [web01]
+2022-08-23 11:03:03,245 p=26637 u=root n=ansible | TASK [Install NTP on Ubuntu] ************************************************************************
+2022-08-23 11:03:03,312 p=26637 u=root n=ansible | skipping: [web01]
+2022-08-23 11:03:03,344 p=26637 u=root n=ansible | skipping: [web02]
+2022-08-23 11:03:03,381 p=26637 u=root n=ansible | skipping: [db01]
+2022-08-23 11:03:04,604 p=26637 u=root n=ansible | ok: [web03]
+2022-08-23 11:03:04,614 p=26637 u=root n=ansible | TASK [Start & Enable NTP on RedHart] ****************************************************************
+2022-08-23 11:03:04,684 p=26637 u=root n=ansible | skipping: [web01]
+2022-08-23 11:03:04,707 p=26637 u=root n=ansible | skipping: [web02]
+2022-08-23 11:03:04,727 p=26637 u=root n=ansible | skipping: [web03]
+2022-08-23 11:03:04,742 p=26637 u=root n=ansible | skipping: [db01]
+2022-08-23 11:03:04,750 p=26637 u=root n=ansible | TASK [Start & enable NTP on Debian] *****************************************************************
+2022-08-23 11:03:04,824 p=26637 u=root n=ansible | skipping: [web01]
+2022-08-23 11:03:04,852 p=26637 u=root n=ansible | skipping: [web02]
+2022-08-23 11:03:04,867 p=26637 u=root n=ansible | skipping: [web03]
+2022-08-23 11:03:04,880 p=26637 u=root n=ansible | skipping: [db01]
+2022-08-23 11:03:04,884 p=26637 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 11:03:04,884 p=26637 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-08-23 11:03:04,885 p=26637 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-08-23 11:03:04,885 p=26637 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-08-23 11:03:04,885 p=26637 u=root n=ansible | web03                      : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-08-23 11:04:44,192 p=26762 u=root n=ansible | PLAY [Provisioning Server] **************************************************************************
+2022-08-23 11:04:44,204 p=26762 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 11:04:45,753 p=26762 u=root n=ansible | ok: [web02]
+2022-08-23 11:04:45,767 p=26762 u=root n=ansible | ok: [db01]
+2022-08-23 11:04:45,769 p=26762 u=root n=ansible | ok: [web01]
+2022-08-23 11:04:45,878 p=26762 u=root n=ansible | ok: [web03]
+2022-08-23 11:04:45,885 p=26762 u=root n=ansible | TASK [Install NTP on Centos] ************************************************************************
+2022-08-23 11:04:46,191 p=26762 u=root n=ansible | skipping: [web03]
+2022-08-23 11:04:46,926 p=26762 u=root n=ansible | ok: [db01]
+2022-08-23 11:04:46,933 p=26762 u=root n=ansible | ok: [web01]
+2022-08-23 11:04:46,935 p=26762 u=root n=ansible | ok: [web02]
+2022-08-23 11:04:46,946 p=26762 u=root n=ansible | TASK [Install NTP on Ubuntu] ************************************************************************
+2022-08-23 11:04:47,016 p=26762 u=root n=ansible | skipping: [web01]
+2022-08-23 11:04:47,044 p=26762 u=root n=ansible | skipping: [web02]
+2022-08-23 11:04:47,081 p=26762 u=root n=ansible | skipping: [db01]
+2022-08-23 11:04:48,313 p=26762 u=root n=ansible | ok: [web03]
+2022-08-23 11:04:48,322 p=26762 u=root n=ansible | TASK [Start & Enable NTP on RedHart] ****************************************************************
+2022-08-23 11:04:48,392 p=26762 u=root n=ansible | skipping: [web01]
+2022-08-23 11:04:48,424 p=26762 u=root n=ansible | skipping: [web02]
+2022-08-23 11:04:48,432 p=26762 u=root n=ansible | skipping: [web03]
+2022-08-23 11:04:48,446 p=26762 u=root n=ansible | skipping: [db01]
+2022-08-23 11:04:48,455 p=26762 u=root n=ansible | TASK [Start & enable NTP on Debian] *****************************************************************
+2022-08-23 11:04:48,524 p=26762 u=root n=ansible | skipping: [web01]
+2022-08-23 11:04:48,556 p=26762 u=root n=ansible | skipping: [web02]
+2022-08-23 11:04:48,564 p=26762 u=root n=ansible | skipping: [web03]
+2022-08-23 11:04:48,579 p=26762 u=root n=ansible | skipping: [db01]
+2022-08-23 11:04:48,583 p=26762 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 11:04:48,583 p=26762 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-08-23 11:04:48,583 p=26762 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-08-23 11:04:48,584 p=26762 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-08-23 11:04:48,584 p=26762 u=root n=ansible | web03                      : ok=2    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
