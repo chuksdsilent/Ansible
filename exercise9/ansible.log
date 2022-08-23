@@ -1037,3 +1037,988 @@ change.
 2022-08-23 09:35:32,619 p=24303 u=root n=ansible | db01                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2022-08-23 09:35:32,619 p=24303 u=root n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2022-08-23 09:35:32,619 p=24303 u=root n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:39:32,597 p=24479 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:39:32,609 p=24479 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:39:34,160 p=24479 u=root n=ansible | ok: [web02]
+2022-08-23 09:39:34,171 p=24479 u=root n=ansible | ok: [db01]
+2022-08-23 09:39:34,173 p=24479 u=root n=ansible | ok: [web01]
+2022-08-23 09:39:34,181 p=24479 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:39:34,244 p=24479 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:39:34,262 p=24479 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:39:34,272 p=24479 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:39:34,275 p=24479 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:39:34,275 p=24479 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:39:34,275 p=24479 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:39:34,276 p=24479 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:43:44,572 p=24591 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:43:44,584 p=24591 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:43:45,724 p=24591 u=root n=ansible | fatal: [web03]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '54.160.214.204' (ECDSA) to the list of known hosts.\r\nConnection closed by 54.160.214.204 port 22", "unreachable": true}
+2022-08-23 09:43:46,165 p=24591 u=root n=ansible | ok: [db01]
+2022-08-23 09:43:46,180 p=24591 u=root n=ansible | ok: [web02]
+2022-08-23 09:43:46,186 p=24591 u=root n=ansible | ok: [web01]
+2022-08-23 09:43:46,193 p=24591 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:43:46,256 p=24591 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:43:46,273 p=24591 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:43:46,284 p=24591 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:43:46,287 p=24591 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:43:46,288 p=24591 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:43:46,288 p=24591 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:43:46,288 p=24591 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:43:46,288 p=24591 u=root n=ansible | web03                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:18,157 p=24657 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:50:18,170 p=24657 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:50:18,298 p=24657 u=root n=ansible | fatal: [web03]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: centos@54.160.214.204: Permission denied (publickey).", "unreachable": true}
+2022-08-23 09:50:19,741 p=24657 u=root n=ansible | ok: [web02]
+2022-08-23 09:50:19,759 p=24657 u=root n=ansible | ok: [db01]
+2022-08-23 09:50:19,761 p=24657 u=root n=ansible | ok: [web01]
+2022-08-23 09:50:19,768 p=24657 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:50:19,832 p=24657 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:50:19,845 p=24657 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:50:19,858 p=24657 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:50:19,861 p=24657 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:50:19,861 p=24657 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:19,862 p=24657 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:19,862 p=24657 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:19,862 p=24657 u=root n=ansible | web03                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:25,384 p=24716 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:50:25,396 p=24716 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:50:25,561 p=24716 u=root n=ansible | fatal: [web03]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: centos@54.160.214.204: Permission denied (publickey).", "unreachable": true}
+2022-08-23 09:50:26,656 p=24716 u=root n=ansible | ok: [db01]
+2022-08-23 09:50:26,673 p=24716 u=root n=ansible | ok: [web02]
+2022-08-23 09:50:26,676 p=24716 u=root n=ansible | ok: [web01]
+2022-08-23 09:50:26,684 p=24716 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:50:26,750 p=24716 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:50:26,767 p=24716 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:50:26,781 p=24716 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:50:26,784 p=24716 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:50:26,784 p=24716 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:26,785 p=24716 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:26,785 p=24716 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:50:26,785 p=24716 u=root n=ansible | web03                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:51:35,704 p=24773 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:51:35,716 p=24773 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:51:35,846 p=24773 u=root n=ansible | fatal: [web03]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: centos@54.160.214.204: Permission denied (publickey).", "unreachable": true}
+2022-08-23 09:51:37,268 p=24773 u=root n=ansible | ok: [web02]
+2022-08-23 09:51:37,278 p=24773 u=root n=ansible | ok: [db01]
+2022-08-23 09:51:37,289 p=24773 u=root n=ansible | ok: [web01]
+2022-08-23 09:51:37,296 p=24773 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:51:37,360 p=24773 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:51:37,375 p=24773 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:51:37,387 p=24773 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:51:37,391 p=24773 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:51:37,391 p=24773 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:51:37,391 p=24773 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:51:37,391 p=24773 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:51:37,391 p=24773 u=root n=ansible | web03                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:56:08,721 p=24846 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:56:08,733 p=24846 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:56:08,871 p=24846 u=root n=ansible | fatal: [web03]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '3.85.208.90' (ECDSA) to the list of known hosts.\r\ncentos@3.85.208.90: Permission denied (publickey).", "unreachable": true}
+2022-08-23 09:56:10,314 p=24846 u=root n=ansible | ok: [web01]
+2022-08-23 09:56:10,331 p=24846 u=root n=ansible | ok: [web02]
+2022-08-23 09:56:10,336 p=24846 u=root n=ansible | ok: [db01]
+2022-08-23 09:56:10,344 p=24846 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:56:10,412 p=24846 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:56:10,423 p=24846 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:56:10,436 p=24846 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:56:10,438 p=24846 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:56:10,439 p=24846 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:56:10,439 p=24846 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:56:10,439 p=24846 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:56:10,439 p=24846 u=root n=ansible | web03                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:58:49,008 p=24913 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:58:49,024 p=24913 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:58:50,624 p=24913 u=root n=ansible | ok: [web02]
+2022-08-23 09:58:50,640 p=24913 u=root n=ansible | ok: [db01]
+2022-08-23 09:58:50,646 p=24913 u=root n=ansible | ok: [web01]
+2022-08-23 09:58:51,857 p=24913 u=root n=ansible | ok: [web03]
+2022-08-23 09:58:51,864 p=24913 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:58:51,964 p=24913 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:58:51,968 p=24913 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:58:51,977 p=24913 u=root n=ansible | ok: [web03] => {
+    "ansible_distribution": "Ubuntu"
+}
+2022-08-23 09:58:51,992 p=24913 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:58:51,996 p=24913 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:58:51,996 p=24913 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:58:51,996 p=24913 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:58:51,996 p=24913 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:58:51,997 p=24913 u=root n=ansible | web03                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:59:45,696 p=24986 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 09:59:45,708 p=24986 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 09:59:47,025 p=24986 u=root n=ansible | ok: [web02]
+2022-08-23 09:59:47,041 p=24986 u=root n=ansible | ok: [db01]
+2022-08-23 09:59:47,046 p=24986 u=root n=ansible | ok: [web01]
+2022-08-23 09:59:47,174 p=24986 u=root n=ansible | ok: [web03]
+2022-08-23 09:59:47,182 p=24986 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 09:59:47,277 p=24986 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:59:47,280 p=24986 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:59:47,295 p=24986 u=root n=ansible | ok: [web03] => {
+    "ansible_distribution": "Ubuntu"
+}
+2022-08-23 09:59:47,309 p=24986 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 09:59:47,313 p=24986 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 09:59:47,314 p=24986 u=root n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:59:47,314 p=24986 u=root n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:59:47,314 p=24986 u=root n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 09:59:47,314 p=24986 u=root n=ansible | web03                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:01:18,011 p=25049 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 10:01:18,024 p=25049 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 10:01:19,746 p=25049 u=root n=ansible | ok: [web02]
+2022-08-23 10:01:19,760 p=25049 u=root n=ansible | ok: [web01]
+2022-08-23 10:01:19,762 p=25049 u=root n=ansible | ok: [db01]
+2022-08-23 10:01:19,884 p=25049 u=root n=ansible | ok: [web03]
+2022-08-23 10:01:19,891 p=25049 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 10:01:19,960 p=25049 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:01:19,989 p=25049 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:01:20,002 p=25049 u=root n=ansible | ok: [web03] => {
+    "ansible_distribution": "Ubuntu"
+}
+2022-08-23 10:01:20,018 p=25049 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:01:20,027 p=25049 u=root n=ansible | TASK [Print Membory Details] ************************************************************************
+2022-08-23 10:01:20,096 p=25049 u=root n=ansible | ok: [web01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 844, 
+            "used": 145
+        }, 
+        "real": {
+            "free": 437, 
+            "total": 989, 
+            "used": 552
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 0, 
+            "total": 0, 
+            "used": 0
+        }
+    }
+}
+2022-08-23 10:01:20,128 p=25049 u=root n=ansible | ok: [web02] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 839, 
+            "used": 150
+        }, 
+        "real": {
+            "free": 416, 
+            "total": 989, 
+            "used": 573
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 0, 
+            "total": 0, 
+            "used": 0
+        }
+    }
+}
+2022-08-23 10:01:20,148 p=25049 u=root n=ansible | ok: [web03] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 797, 
+            "used": 177
+        }, 
+        "real": {
+            "free": 255, 
+            "total": 974, 
+            "used": 719
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 0, 
+            "total": 0, 
+            "used": 0
+        }
+    }
+}
+2022-08-23 10:01:20,161 p=25049 u=root n=ansible | ok: [db01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 762, 
+            "used": 227
+        }, 
+        "real": {
+            "free": 201, 
+            "total": 989, 
+            "used": 788
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 0, 
+            "total": 0, 
+            "used": 0
+        }
+    }
+}
+2022-08-23 10:01:20,165 p=25049 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 10:01:20,165 p=25049 u=root n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:01:20,165 p=25049 u=root n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:01:20,165 p=25049 u=root n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:01:20,166 p=25049 u=root n=ansible | web03                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:02:38,142 p=25131 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 10:02:38,154 p=25131 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 10:02:39,838 p=25131 u=root n=ansible | ok: [db01]
+2022-08-23 10:02:39,851 p=25131 u=root n=ansible | ok: [web02]
+2022-08-23 10:02:39,853 p=25131 u=root n=ansible | ok: [web01]
+2022-08-23 10:02:39,979 p=25131 u=root n=ansible | ok: [web03]
+2022-08-23 10:02:39,986 p=25131 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 10:02:40,056 p=25131 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:02:40,088 p=25131 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:02:40,098 p=25131 u=root n=ansible | ok: [web03] => {
+    "ansible_distribution": "Ubuntu"
+}
+2022-08-23 10:02:40,113 p=25131 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:02:40,123 p=25131 u=root n=ansible | TASK [Print Membory Details] ************************************************************************
+2022-08-23 10:02:40,192 p=25131 u=root n=ansible | ok: [web01] => {
+    "ansible_memory_mb.real.free": "437"
+}
+2022-08-23 10:02:40,220 p=25131 u=root n=ansible | ok: [web02] => {
+    "ansible_memory_mb.real.free": "416"
+}
+2022-08-23 10:02:40,233 p=25131 u=root n=ansible | ok: [web03] => {
+    "ansible_memory_mb.real.free": "255"
+}
+2022-08-23 10:02:40,250 p=25131 u=root n=ansible | ok: [db01] => {
+    "ansible_memory_mb.real.free": "201"
+}
+2022-08-23 10:02:40,254 p=25131 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 10:02:40,255 p=25131 u=root n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:02:40,255 p=25131 u=root n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:02:40,255 p=25131 u=root n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:02:40,255 p=25131 u=root n=ansible | web03                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:04:37,925 p=25216 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 10:04:37,938 p=25216 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 10:04:39,624 p=25216 u=root n=ansible | ok: [db01]
+2022-08-23 10:04:39,636 p=25216 u=root n=ansible | ok: [web02]
+2022-08-23 10:04:39,638 p=25216 u=root n=ansible | ok: [web01]
+2022-08-23 10:04:39,769 p=25216 u=root n=ansible | ok: [web03]
+2022-08-23 10:04:39,776 p=25216 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 10:04:39,852 p=25216 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:04:39,884 p=25216 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:04:39,892 p=25216 u=root n=ansible | ok: [web03] => {
+    "ansible_distribution": "Ubuntu"
+}
+2022-08-23 10:04:39,909 p=25216 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:04:39,917 p=25216 u=root n=ansible | TASK [Print Membory Details] ************************************************************************
+2022-08-23 10:04:39,992 p=25216 u=root n=ansible | ok: [web01] => {
+    "ansible_memory_mb.real.free": "437"
+}
+2022-08-23 10:04:40,024 p=25216 u=root n=ansible | ok: [web02] => {
+    "ansible_memory_mb.real.free": "416"
+}
+2022-08-23 10:04:40,031 p=25216 u=root n=ansible | ok: [web03] => {
+    "ansible_memory_mb.real.free": "254"
+}
+2022-08-23 10:04:40,048 p=25216 u=root n=ansible | ok: [db01] => {
+    "ansible_memory_mb.real.free": "201"
+}
+2022-08-23 10:04:40,058 p=25216 u=root n=ansible | TASK [Print the Name of the Processor] **************************************************************
+2022-08-23 10:04:40,156 p=25216 u=root n=ansible | ok: [web01] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:04:40,164 p=25216 u=root n=ansible | ok: [web02] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:04:40,175 p=25216 u=root n=ansible | ok: [web03] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:04:40,192 p=25216 u=root n=ansible | ok: [db01] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:04:40,195 p=25216 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 10:04:40,195 p=25216 u=root n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:04:40,195 p=25216 u=root n=ansible | web01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:04:40,196 p=25216 u=root n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:04:40,196 p=25216 u=root n=ansible | web03                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:06:32,763 p=25309 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "172.31.84.254"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::10e5:70ff:fe62:3397"
+        ], 
+        "ansible_apparmor": {
+            "status": "disabled"
+        }, 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "08/24/2006", 
+        "ansible_bios_version": "4.11.amazon", 
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-3.10.0-1160.59.1.el7.x86_64", 
+            "LANG": "en_US.UTF-8", 
+            "console": "ttyS0", 
+            "crashkernel": "auto", 
+            "net.ifnames": "0", 
+            "ro": true, 
+            "root": "UUID=44a6a613-4e21-478b-a909-ab653c9d39df"
+        }, 
+        "ansible_date_time": {
+            "date": "2022-08-23", 
+            "day": "23", 
+            "epoch": "1661249192", 
+            "hour": "10", 
+            "iso8601": "2022-08-23T10:06:32Z", 
+            "iso8601_basic": "20220823T100632689308", 
+            "iso8601_basic_short": "20220823T100632", 
+            "iso8601_micro": "2022-08-23T10:06:32.689308Z", 
+            "minute": "06", 
+            "month": "08", 
+            "second": "32", 
+            "time": "10:06:32", 
+            "tz": "UTC", 
+            "tz_offset": "+0000", 
+            "weekday": "Tuesday", 
+            "weekday_number": "2", 
+            "weeknumber": "34", 
+            "year": "2022"
+        }, 
+        "ansible_default_ipv4": {
+            "address": "172.31.84.254", 
+            "alias": "eth0", 
+            "broadcast": "172.31.95.255", 
+            "gateway": "172.31.80.1", 
+            "interface": "eth0", 
+            "macaddress": "12:e5:70:62:33:97", 
+            "mtu": 9001, 
+            "netmask": "255.255.240.0", 
+            "network": "172.31.80.0", 
+            "type": "ether"
+        }, 
+        "ansible_default_ipv6": {}, 
+        "ansible_device_links": {
+            "ids": {}, 
+            "labels": {}, 
+            "masters": {}, 
+            "uuids": {
+                "xvda1": [
+                    "44a6a613-4e21-478b-a909-ab653c9d39df"
+                ]
+            }
+        }, 
+        "ansible_devices": {
+            "xvda": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {
+                    "xvda1": {
+                        "holders": [], 
+                        "links": {
+                            "ids": [], 
+                            "labels": [], 
+                            "masters": [], 
+                            "uuids": [
+                                "44a6a613-4e21-478b-a909-ab653c9d39df"
+                            ]
+                        }, 
+                        "sectors": "20969439", 
+                        "sectorsize": 512, 
+                        "size": "10.00 GB", 
+                        "start": "2048", 
+                        "uuid": "44a6a613-4e21-478b-a909-ab653c9d39df"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "0", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "deadline", 
+                "sectors": "20971520", 
+                "sectorsize": "512", 
+                "size": "10.00 GB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }
+        }, 
+        "ansible_distribution": "CentOS", 
+        "ansible_distribution_file_parsed": true, 
+        "ansible_distribution_file_path": "/etc/redhat-release", 
+        "ansible_distribution_file_variety": "RedHat", 
+        "ansible_distribution_major_version": "7", 
+        "ansible_distribution_release": "Core", 
+        "ansible_distribution_version": "7.9", 
+        "ansible_dns": {
+            "nameservers": [
+                "172.31.0.2"
+            ], 
+            "search": [
+                "ec2.internal"
+            ]
+        }, 
+        "ansible_domain": "ec2.internal", 
+        "ansible_effective_group_id": 1000, 
+        "ansible_effective_user_id": 1000, 
+        "ansible_env": {
+            "HOME": "/home/centos", 
+            "LANG": "C", 
+            "LC_ALL": "C", 
+            "LC_MESSAGES": "C", 
+            "LESSOPEN": "||/usr/bin/lesspipe.sh %s", 
+            "LOGNAME": "centos", 
+            "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:", 
+            "MAIL": "/var/mail/centos", 
+            "PATH": "/usr/local/bin:/usr/bin", 
+            "PWD": "/home/centos", 
+            "SELINUX_LEVEL_REQUESTED": "", 
+            "SELINUX_ROLE_REQUESTED": "", 
+            "SELINUX_USE_CURRENT_RANGE": "", 
+            "SHELL": "/bin/bash", 
+            "SHLVL": "2", 
+            "SSH_CLIENT": "44.202.99.92 43698 22", 
+            "SSH_CONNECTION": "44.202.99.92 43698 172.31.84.254 22", 
+            "SSH_TTY": "/dev/pts/0", 
+            "TERM": "xterm", 
+            "USER": "centos", 
+            "XDG_RUNTIME_DIR": "/run/user/1000", 
+            "XDG_SESSION_ID": "13", 
+            "_": "/usr/bin/python"
+        }, 
+        "ansible_eth0": {
+            "active": true, 
+            "device": "eth0", 
+            "features": {
+                "busy_poll": "off [fixed]", 
+                "fcoe_mtu": "off [fixed]", 
+                "generic_receive_offload": "on", 
+                "generic_segmentation_offload": "on", 
+                "highdma": "off [fixed]", 
+                "hw_tc_offload": "off [fixed]", 
+                "l2_fwd_offload": "off [fixed]", 
+                "large_receive_offload": "off [fixed]", 
+                "loopback": "off [fixed]", 
+                "netns_local": "off [fixed]", 
+                "ntuple_filters": "off [fixed]", 
+                "receive_hashing": "off [fixed]", 
+                "rx_all": "off [fixed]", 
+                "rx_checksumming": "on [fixed]", 
+                "rx_fcs": "off [fixed]", 
+                "rx_gro_hw": "off [fixed]", 
+                "rx_udp_tunnel_port_offload": "off [fixed]", 
+                "rx_vlan_filter": "off [fixed]", 
+                "rx_vlan_offload": "off [fixed]", 
+                "rx_vlan_stag_filter": "off [fixed]", 
+                "rx_vlan_stag_hw_parse": "off [fixed]", 
+                "scatter_gather": "on", 
+                "tcp_segmentation_offload": "on", 
+                "tx_checksum_fcoe_crc": "off [fixed]", 
+                "tx_checksum_ip_generic": "off [fixed]", 
+                "tx_checksum_ipv4": "on [fixed]", 
+                "tx_checksum_ipv6": "on", 
+                "tx_checksum_sctp": "off [fixed]", 
+                "tx_checksumming": "on", 
+                "tx_fcoe_segmentation": "off [fixed]", 
+                "tx_gre_csum_segmentation": "off [fixed]", 
+                "tx_gre_segmentation": "off [fixed]", 
+                "tx_gso_partial": "off [fixed]", 
+                "tx_gso_robust": "on [fixed]", 
+                "tx_ipip_segmentation": "off [fixed]", 
+                "tx_lockless": "off [fixed]", 
+                "tx_nocache_copy": "off", 
+                "tx_scatter_gather": "on", 
+                "tx_scatter_gather_fraglist": "off [fixed]", 
+                "tx_sctp_segmentation": "off [fixed]", 
+                "tx_sit_segmentation": "off [fixed]", 
+                "tx_tcp6_segmentation": "on", 
+                "tx_tcp_ecn_segmentation": "off [fixed]", 
+                "tx_tcp_mangleid_segmentation": "off", 
+                "tx_tcp_segmentation": "on", 
+                "tx_udp_tnl_csum_segmentation": "off [fixed]", 
+                "tx_udp_tnl_segmentation": "off [fixed]", 
+                "tx_vlan_offload": "off [fixed]", 
+                "tx_vlan_stag_hw_insert": "off [fixed]", 
+                "udp_fragmentation_offload": "off [fixed]", 
+                "vlan_challenged": "off [fixed]"
+            }, 
+            "hw_timestamp_filters": [], 
+            "ipv4": {
+                "address": "172.31.84.254", 
+                "broadcast": "172.31.95.255", 
+                "netmask": "255.255.240.0", 
+                "network": "172.31.80.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::10e5:70ff:fe62:3397", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "12:e5:70:62:33:97", 
+            "module": "xen_netfront", 
+            "mtu": 9001, 
+            "pciid": "vif-0", 
+            "promisc": false, 
+            "timestamping": [
+                "rx_software", 
+                "software"
+            ], 
+            "type": "ether"
+        }, 
+        "ansible_fibre_channel_wwn": [], 
+        "ansible_fips": false, 
+        "ansible_form_factor": "Other", 
+        "ansible_fqdn": "ip-172-31-84-254.ec2.internal", 
+        "ansible_hostname": "ip-172-31-84-254", 
+        "ansible_hostnqn": "", 
+        "ansible_interfaces": [
+            "lo", 
+            "eth0"
+        ], 
+        "ansible_is_chroot": true, 
+        "ansible_iscsi_iqn": "", 
+        "ansible_kernel": "3.10.0-1160.59.1.el7.x86_64", 
+        "ansible_kernel_version": "#1 SMP Wed Feb 23 16:47:03 UTC 2022", 
+        "ansible_lo": {
+            "active": true, 
+            "device": "lo", 
+            "features": {
+                "busy_poll": "off [fixed]", 
+                "fcoe_mtu": "off [fixed]", 
+                "generic_receive_offload": "on", 
+                "generic_segmentation_offload": "on", 
+                "highdma": "on [fixed]", 
+                "hw_tc_offload": "off [fixed]", 
+                "l2_fwd_offload": "off [fixed]", 
+                "large_receive_offload": "off [fixed]", 
+                "loopback": "on [fixed]", 
+                "netns_local": "on [fixed]", 
+                "ntuple_filters": "off [fixed]", 
+                "receive_hashing": "off [fixed]", 
+                "rx_all": "off [fixed]", 
+                "rx_checksumming": "on [fixed]", 
+                "rx_fcs": "off [fixed]", 
+                "rx_gro_hw": "off [fixed]", 
+                "rx_udp_tunnel_port_offload": "off [fixed]", 
+                "rx_vlan_filter": "off [fixed]", 
+                "rx_vlan_offload": "off [fixed]", 
+                "rx_vlan_stag_filter": "off [fixed]", 
+                "rx_vlan_stag_hw_parse": "off [fixed]", 
+                "scatter_gather": "on", 
+                "tcp_segmentation_offload": "on", 
+                "tx_checksum_fcoe_crc": "off [fixed]", 
+                "tx_checksum_ip_generic": "on [fixed]", 
+                "tx_checksum_ipv4": "off [fixed]", 
+                "tx_checksum_ipv6": "off [fixed]", 
+                "tx_checksum_sctp": "on [fixed]", 
+                "tx_checksumming": "on", 
+                "tx_fcoe_segmentation": "off [fixed]", 
+                "tx_gre_csum_segmentation": "off [fixed]", 
+                "tx_gre_segmentation": "off [fixed]", 
+                "tx_gso_partial": "off [fixed]", 
+                "tx_gso_robust": "off [fixed]", 
+                "tx_ipip_segmentation": "off [fixed]", 
+                "tx_lockless": "on [fixed]", 
+                "tx_nocache_copy": "off [fixed]", 
+                "tx_scatter_gather": "on [fixed]", 
+                "tx_scatter_gather_fraglist": "on [fixed]", 
+                "tx_sctp_segmentation": "on", 
+                "tx_sit_segmentation": "off [fixed]", 
+                "tx_tcp6_segmentation": "on", 
+                "tx_tcp_ecn_segmentation": "on", 
+                "tx_tcp_mangleid_segmentation": "on", 
+                "tx_tcp_segmentation": "on", 
+                "tx_udp_tnl_csum_segmentation": "off [fixed]", 
+                "tx_udp_tnl_segmentation": "off [fixed]", 
+                "tx_vlan_offload": "off [fixed]", 
+                "tx_vlan_stag_hw_insert": "off [fixed]", 
+                "udp_fragmentation_offload": "on", 
+                "vlan_challenged": "on [fixed]"
+            }, 
+            "hw_timestamp_filters": [], 
+            "ipv4": {
+                "address": "127.0.0.1", 
+                "broadcast": "", 
+                "netmask": "255.0.0.0", 
+                "network": "127.0.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "::1", 
+                    "prefix": "128", 
+                    "scope": "host"
+                }
+            ], 
+            "mtu": 65536, 
+            "promisc": false, 
+            "timestamping": [
+                "rx_software", 
+                "software"
+            ], 
+            "type": "loopback"
+        }, 
+        "ansible_local": {}, 
+        "ansible_lsb": {}, 
+        "ansible_machine": "x86_64", 
+        "ansible_machine_id": "b53ff59321fedc6a481aabc5ff65ced0", 
+        "ansible_memfree_mb": 201, 
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 763, 
+                "used": 226
+            }, 
+            "real": {
+                "free": 201, 
+                "total": 989, 
+                "used": 788
+            }, 
+            "swap": {
+                "cached": 0, 
+                "free": 0, 
+                "total": 0, 
+                "used": 0
+            }
+        }, 
+        "ansible_memtotal_mb": 989, 
+        "ansible_mounts": [
+            {
+                "block_available": 2178779, 
+                "block_size": 4096, 
+                "block_total": 2618560, 
+                "block_used": 439781, 
+                "device": "/dev/xvda1", 
+                "fstype": "xfs", 
+                "inode_available": 5207467, 
+                "inode_total": 5242240, 
+                "inode_used": 34773, 
+                "mount": "/", 
+                "options": "rw,seclabel,relatime,attr2,inode64,noquota", 
+                "size_available": 8924278784, 
+                "size_total": 10725621760, 
+                "uuid": "44a6a613-4e21-478b-a909-ab653c9d39df"
+            }
+        ], 
+        "ansible_nodename": "ip-172-31-84-254.ec2.internal", 
+        "ansible_os_family": "RedHat", 
+        "ansible_pkg_mgr": "yum", 
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-3.10.0-1160.59.1.el7.x86_64", 
+            "LANG": "en_US.UTF-8", 
+            "console": [
+                "tty0", 
+                "ttyS0,115200n8", 
+                "ttyS0"
+            ], 
+            "crashkernel": "auto", 
+            "net.ifnames": "0", 
+            "ro": true, 
+            "root": "UUID=44a6a613-4e21-478b-a909-ab653c9d39df"
+        }, 
+        "ansible_processor": [
+            "0", 
+            "GenuineIntel", 
+            "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+        ], 
+        "ansible_processor_cores": 1, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 1, 
+        "ansible_product_name": "HVM domU", 
+        "ansible_product_serial": "NA", 
+        "ansible_product_uuid": "NA", 
+        "ansible_product_version": "4.11.amazon", 
+        "ansible_python": {
+            "executable": "/usr/bin/python", 
+            "has_sslcontext": true, 
+            "type": "CPython", 
+            "version": {
+                "major": 2, 
+                "micro": 5, 
+                "minor": 7, 
+                "releaselevel": "final", 
+                "serial": 0
+            }, 
+            "version_info": [
+                2, 
+                7, 
+                5, 
+                "final", 
+                0
+            ]
+        }, 
+        "ansible_python_version": "2.7.5", 
+        "ansible_real_group_id": 1000, 
+        "ansible_real_user_id": 1000, 
+        "ansible_selinux": {
+            "config_mode": "enforcing", 
+            "mode": "enforcing", 
+            "policyvers": 31, 
+            "status": "enabled", 
+            "type": "targeted"
+        }, 
+        "ansible_selinux_python_present": true, 
+        "ansible_service_mgr": "systemd", 
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIGfjRRegQGIV9PVT5IRgJN5uz1NyIatkjECg7fTE1KZT4oOh3DqtsVGR0glZz8ziTkCogsOmXVpQzNm1UUsbg8=", 
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIKd344qrRwzht84PKyFg6vyipIhgxXGPjT7na583xdcu", 
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCX77Ovc2/h+xtoytRuOofIF9rtxGxVatoZE2Gtk87eMOwh75ux8eHduj06wPtPO1/Fe5tQh6HNrKSNuyxFNUzpJVCtWTnThSfEyTsQxKrhC7kqKovfZqYzgWD2ezbKUZ+PZyKAgmIVd02J+0PiMFc6LxGWLvTX4XW2PEVsokCsBjcvoxXJU+vhJn4wmxl+7mkdrhtt5cHBvuZwmAzOt0mOxv4bjOzSZTsfRMUrDBpKT5EG3ccNJGb1zuu7xIs90ZCggA1CtEUyiwk5jP18NLC08eWVhmuY27y9cSxIUs9HaQrINQcnSWNZx70eqhfnunPvNF3WBiN2AYoxm+brd7zT", 
+        "ansible_swapfree_mb": 0, 
+        "ansible_swaptotal_mb": 0, 
+        "ansible_system": "Linux", 
+        "ansible_system_capabilities": [
+            ""
+        ], 
+        "ansible_system_capabilities_enforced": "True", 
+        "ansible_system_vendor": "Xen", 
+        "ansible_uptime_seconds": 2360, 
+        "ansible_user_dir": "/home/centos", 
+        "ansible_user_gecos": "Cloud User", 
+        "ansible_user_gid": 1000, 
+        "ansible_user_id": "centos", 
+        "ansible_user_shell": "/bin/bash", 
+        "ansible_user_uid": 1000, 
+        "ansible_userspace_architecture": "x86_64", 
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "xen", 
+        "discovered_interpreter_python": "/usr/bin/python", 
+        "gather_subset": [
+            "all"
+        ], 
+        "module_setup": true
+    }, 
+    "changed": false
+}
+2022-08-23 10:09:40,866 p=25337 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 10:09:40,879 p=25337 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 10:09:42,573 p=25337 u=root n=ansible | ok: [web02]
+2022-08-23 10:09:42,588 p=25337 u=root n=ansible | ok: [db01]
+2022-08-23 10:09:42,591 p=25337 u=root n=ansible | ok: [web01]
+2022-08-23 10:09:42,718 p=25337 u=root n=ansible | ok: [web03]
+2022-08-23 10:09:42,725 p=25337 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 10:09:42,824 p=25337 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:09:42,825 p=25337 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:09:42,841 p=25337 u=root n=ansible | ok: [web03] => {
+    "ansible_distribution": "Ubuntu"
+}
+2022-08-23 10:09:42,853 p=25337 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:09:42,862 p=25337 u=root n=ansible | TASK [Print Membory Details] ************************************************************************
+2022-08-23 10:09:42,932 p=25337 u=root n=ansible | ok: [web01] => {
+    "ansible_memory_mb.real.free": "436"
+}
+2022-08-23 10:09:42,964 p=25337 u=root n=ansible | ok: [web02] => {
+    "ansible_memory_mb.real.free": "416"
+}
+2022-08-23 10:09:42,974 p=25337 u=root n=ansible | ok: [web03] => {
+    "ansible_memory_mb.real.free": "253"
+}
+2022-08-23 10:09:42,992 p=25337 u=root n=ansible | ok: [db01] => {
+    "ansible_memory_mb.real.free": "201"
+}
+2022-08-23 10:09:43,000 p=25337 u=root n=ansible | TASK [Print the Name of the Processor] **************************************************************
+2022-08-23 10:09:43,068 p=25337 u=root n=ansible | ok: [web01] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:09:43,096 p=25337 u=root n=ansible | ok: [web02] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:09:43,115 p=25337 u=root n=ansible | ok: [web03] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:09:43,129 p=25337 u=root n=ansible | ok: [db01] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:09:43,137 p=25337 u=root n=ansible | TASK [Welcome] **************************************************************************************
+2022-08-23 10:09:43,208 p=25337 u=root n=ansible | ok: [web01] => {
+    "ansible_default_ipv4": {
+        "address": "172.31.95.100", 
+        "alias": "eth0", 
+        "broadcast": "172.31.95.255", 
+        "gateway": "172.31.80.1", 
+        "interface": "eth0", 
+        "macaddress": "12:38:8a:8c:e6:73", 
+        "mtu": 9001, 
+        "netmask": "255.255.240.0", 
+        "network": "172.31.80.0", 
+        "type": "ether"
+    }
+}
+2022-08-23 10:09:43,244 p=25337 u=root n=ansible | ok: [web02] => {
+    "ansible_default_ipv4": {
+        "address": "172.31.22.136", 
+        "alias": "eth0", 
+        "broadcast": "172.31.31.255", 
+        "gateway": "172.31.16.1", 
+        "interface": "eth0", 
+        "macaddress": "0a:da:e1:9d:eb:e5", 
+        "mtu": 9001, 
+        "netmask": "255.255.240.0", 
+        "network": "172.31.16.0", 
+        "type": "ether"
+    }
+}
+2022-08-23 10:09:43,265 p=25337 u=root n=ansible | ok: [web03] => {
+    "ansible_default_ipv4": {
+        "address": "172.31.21.178", 
+        "alias": "eth0", 
+        "broadcast": "172.31.31.255", 
+        "gateway": "172.31.16.1", 
+        "interface": "eth0", 
+        "macaddress": "0a:9d:c7:fc:98:1b", 
+        "mtu": 9001, 
+        "netmask": "255.255.240.0", 
+        "network": "172.31.16.0", 
+        "type": "ether"
+    }
+}
+2022-08-23 10:09:43,281 p=25337 u=root n=ansible | ok: [db01] => {
+    "ansible_default_ipv4": {
+        "address": "172.31.84.254", 
+        "alias": "eth0", 
+        "broadcast": "172.31.95.255", 
+        "gateway": "172.31.80.1", 
+        "interface": "eth0", 
+        "macaddress": "12:e5:70:62:33:97", 
+        "mtu": 9001, 
+        "netmask": "255.255.240.0", 
+        "network": "172.31.80.0", 
+        "type": "ether"
+    }
+}
+2022-08-23 10:09:43,284 p=25337 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 10:09:43,284 p=25337 u=root n=ansible | db01                       : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:09:43,285 p=25337 u=root n=ansible | web01                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:09:43,285 p=25337 u=root n=ansible | web02                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:09:43,285 p=25337 u=root n=ansible | web03                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:10:50,613 p=25436 u=root n=ansible | PLAY [Learning Fact variable] ***********************************************************************
+2022-08-23 10:10:50,625 p=25436 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************
+2022-08-23 10:10:52,318 p=25436 u=root n=ansible | ok: [web02]
+2022-08-23 10:10:52,330 p=25436 u=root n=ansible | ok: [db01]
+2022-08-23 10:10:52,332 p=25436 u=root n=ansible | ok: [web01]
+2022-08-23 10:10:52,456 p=25436 u=root n=ansible | ok: [web03]
+2022-08-23 10:10:52,463 p=25436 u=root n=ansible | TASK [Print 0S names] *******************************************************************************
+2022-08-23 10:10:52,528 p=25436 u=root n=ansible | ok: [web01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:10:52,557 p=25436 u=root n=ansible | ok: [web02] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:10:52,578 p=25436 u=root n=ansible | ok: [web03] => {
+    "ansible_distribution": "Ubuntu"
+}
+2022-08-23 10:10:52,588 p=25436 u=root n=ansible | ok: [db01] => {
+    "ansible_distribution": "CentOS"
+}
+2022-08-23 10:10:52,597 p=25436 u=root n=ansible | TASK [Print Membory Details] ************************************************************************
+2022-08-23 10:10:52,696 p=25436 u=root n=ansible | ok: [web01] => {
+    "ansible_memory_mb.real.free": "436"
+}
+2022-08-23 10:10:52,697 p=25436 u=root n=ansible | ok: [web02] => {
+    "ansible_memory_mb.real.free": "416"
+}
+2022-08-23 10:10:52,711 p=25436 u=root n=ansible | ok: [web03] => {
+    "ansible_memory_mb.real.free": "253"
+}
+2022-08-23 10:10:52,722 p=25436 u=root n=ansible | ok: [db01] => {
+    "ansible_memory_mb.real.free": "201"
+}
+2022-08-23 10:10:52,730 p=25436 u=root n=ansible | TASK [Print the Name of the Processor] **************************************************************
+2022-08-23 10:10:52,800 p=25436 u=root n=ansible | ok: [web01] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:10:52,832 p=25436 u=root n=ansible | ok: [web02] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:10:52,841 p=25436 u=root n=ansible | ok: [web03] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:10:52,858 p=25436 u=root n=ansible | ok: [db01] => {
+    "ansible_processor[2]": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+}
+2022-08-23 10:10:52,866 p=25436 u=root n=ansible | TASK [Print System ip address] **********************************************************************
+2022-08-23 10:10:52,936 p=25436 u=root n=ansible | ok: [web01] => {
+    "ansible_default_ipv4.address": "172.31.95.100"
+}
+2022-08-23 10:10:52,968 p=25436 u=root n=ansible | ok: [web02] => {
+    "ansible_default_ipv4.address": "172.31.22.136"
+}
+2022-08-23 10:10:52,981 p=25436 u=root n=ansible | ok: [web03] => {
+    "ansible_default_ipv4.address": "172.31.21.178"
+}
+2022-08-23 10:10:52,998 p=25436 u=root n=ansible | ok: [db01] => {
+    "ansible_default_ipv4.address": "172.31.84.254"
+}
+2022-08-23 10:10:53,002 p=25436 u=root n=ansible | PLAY RECAP ******************************************************************************************
+2022-08-23 10:10:53,002 p=25436 u=root n=ansible | db01                       : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:10:53,002 p=25436 u=root n=ansible | web01                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:10:53,002 p=25436 u=root n=ansible | web02                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-08-23 10:10:53,003 p=25436 u=root n=ansible | web03                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
